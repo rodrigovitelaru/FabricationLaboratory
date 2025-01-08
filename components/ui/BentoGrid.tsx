@@ -19,7 +19,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[18rem] md:grid-cols-3 gap-4 mx-auto max-w-9xl",
+        "grid md:auto-rows-[18rem] md:grid-cols-3 gap-6 mx-auto max-w-9xl",
         className
       )}
     >
@@ -118,27 +118,10 @@ export const BentoGridItem = ({
           {id === 3 && (
             <div className="flex gap-4 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
               <div className="flex flex-col gap-3 lg:gap-7">
-                {["React.js", "Next.js", "TypeScript", "Java"].map((item) => (
-                  <span
-                    key={item}
-                    className="py-2 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E] text-[#c1c2d3]"
-                  >
-                    {item}
-                  </span>
-                ))}
                 <span className="py-3 px-3 rounded-lg text-center bg-[#10132e]" />
               </div>
               <span className="px-1 rounded-lg text-center bg-[#f1f1f10a]" />
-              <div className="flex flex-col gap-3 lg:gap-6">
-                {["Vue.js", "MySqL", "MongoDB", "Node.js"].map((item) => (
-                  <span
-                    key={item}
-                    className="py-2 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E] text-[#c1c2d3]"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
+              <div className="flex flex-col gap-3 lg:gap-6"></div>
             </div>
           )}
 

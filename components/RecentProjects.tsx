@@ -1,79 +1,47 @@
 "use client";
 
-import { projects } from "@/data";
-import React from "react";
-import { PinContainer } from "./ui/3d-pin";
-import { FaLocationArrow } from "react-icons/fa";
 import Image from "next/image";
+import React from "react";
 
-const RecentProjects = () => {
+const Footer = () => {
   return (
-    <div className="py-20 text-white-100" id="projects">
-      <h1 className="heading">
-        A small selection of{" "}
-        <span className="text-purple">recent projects</span>
-      </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
-        {projects.map(({ id, title, des, img, iconLists, link }) => (
-          <div
-            key={id}
-            className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
-          >
-            <PinContainer title={link} href={link}>
-              <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] rounded-lg mb-10">
-                <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
-                  <Image src="/bg.png" alt="bg-img" width={300} height={200} />
-                </div>
-                <Image
-                  src={img}
-                  alt={title}
-                  width={500}
-                  height={500}
-                  className="z-10 absolute bottom-0"
-                />
-              </div>
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                {title}
-              </h1>
-
-              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2">
-                {des}
-              </p>
-
-              <div className="flex items-center justify-between mt-7 mb-3  ">
-                <div className="flex items-center">
-                  {iconLists.map((icon, index) => (
-                    <div
-                      key={icon}
-                      className="border border-white'/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index * 2}px)`,
-                      }}
-                    >
-                      <Image
-                        src={icon}
-                        alt={icon}
-                        width={600}
-                        height={700}
-                        className="p-2"
-                      />
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Send offer
-                  </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
-                </div>
-              </div>
-            </PinContainer>
-          </div>
-        ))}
+    <footer className="w-full pb-10 mb-[100px] md:mb-5 lg:mt-60">
+      <div className="flex-col lg:flex-row lg:items-start text-white flex items-center  bg-black bg-opacity-[3.6%] p-10 m-10 rounded-[30px] drop-shadow-2xl">
+        <div className="lg:w-1/2 lg:flex lg:justify-start">
+          {/* Imaginea ta va fi aici */}
+          <Image
+            src="/bg14.png"
+            alt="Descriptive Alt Text"
+            width={900}
+            height={800}
+            className="w-full lg:w-auto"
+          />
+        </div>
+        <div className="lg:w-1/2 text-left">
+          <h1 className="heading lg:max-w-[45vw] text-left text-[35px]">
+            Revolutionizing the Future{" "}
+            <span className="text-purple text-left text-[35px]">
+              with CO2 Lasers,
+            </span>{" "}
+            Fiber Lasers, and 3D Printers
+          </h1>
+          <p className="text-white text-opacity-[75%] md:mt-10 my-5 text-[20px] text-left">
+            At our company, we are passionate about innovation and technology.
+            From CO2 lasers and fiber lasers to cutting-edge 3D printers, we are
+            dedicated to providing advanced solutions that turn ideas into
+            reality. With a team of experts in the field and a customer-focused
+            approach, we are your trusted partner on the journey to
+            technological success.
+          </p>
+        </div>
+        <div className="bg-black-100 bg-opacity-[12%] m-2 p-4 bottom-0 w-50 rounded-lg right-7 absolute">
+          <h1 className="text-center text-white-200 font-semibold">
+            All do you need
+          </h1>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
-export default RecentProjects;
+export default Footer;

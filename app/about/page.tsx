@@ -1,13 +1,15 @@
 "use client";
 import dynamic from "next/dynamic";
 
-const Hero = dynamic(() => import("../components/Hero"), { ssr: false });
+const RecentProjects = dynamic(() => import("@/components/RecentProjects"), {
+  ssr: false,
+});
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
 
-import { FloatingNav } from "../components/ui/FloatingNav";
+import { FloatingNav } from "@/components/ui/FloatingNav";
 import { FaEnvelope, FaHome, FaSatelliteDish, FaUser } from "react-icons/fa";
 import { BackgroundBeams } from "@/components/ui/background-beams";
-import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
+import Grid from "@/components/Grid";
 
 export default function Home() {
   const navItems = [
@@ -26,9 +28,9 @@ export default function Home() {
     <main className="relative flex justify-center items-center flex-col mx-auto sm:px-10 px-5 overflow-clip bg-black-100">
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
-        <Hero />
         <BackgroundBeams />
-        <ThreeDCardDemo />
+        <Grid />
+        <RecentProjects />
         <Footer />
       </div>
     </main>

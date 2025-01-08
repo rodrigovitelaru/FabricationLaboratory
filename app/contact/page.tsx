@@ -1,13 +1,11 @@
 "use client";
 import dynamic from "next/dynamic";
 
-const Hero = dynamic(() => import("../components/Hero"), { ssr: false });
+const Hero = dynamic(() => import("@/components/Hero"), { ssr: false });
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
 
-import { FloatingNav } from "../components/ui/FloatingNav";
+import { FloatingNav } from "@/components/ui/FloatingNav";
 import { FaEnvelope, FaHome, FaSatelliteDish, FaUser } from "react-icons/fa";
-import { BackgroundBeams } from "@/components/ui/background-beams";
-import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
 
 export default function Home() {
   const navItems = [
@@ -27,8 +25,6 @@ export default function Home() {
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
         <Hero />
-        <BackgroundBeams />
-        <ThreeDCardDemo />
         <Footer />
       </div>
     </main>
