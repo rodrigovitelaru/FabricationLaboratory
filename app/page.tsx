@@ -6,8 +6,9 @@ const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
 
 import { FloatingNav } from "../components/ui/FloatingNav";
 import { FaEnvelope, FaHome, FaSatelliteDish, FaUser } from "react-icons/fa";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
+import { LayoutGridDemo } from "@/components/LayoutGridDemo";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 export default function Home() {
   const navItems = [
@@ -28,6 +29,7 @@ export default function Home() {
         <FloatingNav navItems={navItems} />
         <Hero />
         <BackgroundBeams />
+        <LayoutGridDemo />
         <ThreeDCardDemo />
         <Footer />
       </div>
